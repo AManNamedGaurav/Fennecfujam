@@ -18,6 +18,10 @@ config/name="GhostBitFennefFuJam"
 run/main_scene="res://scenes/world.tscn"
 config/icon="res://sprite/icon.png"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/codeandweb.texturepacker/plugin.cfg" )
+
 [input]
 
 left={

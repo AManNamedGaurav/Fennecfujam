@@ -1,0 +1,438 @@
+{
+	"textures": [
+		{
+			"image": "player_walking.png",
+			"size": {
+				"w": 826,
+				"h": 81
+			},
+			"sprites": [
+				{
+					"filename": "walking animation-10.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 58,
+						"h": 79
+					},
+					"margin": {
+						"x": 22,
+						"y": 1,
+						"w": 22,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-3.png",
+					"region": {
+						"x": 61,
+						"y": 1,
+						"w": 58,
+						"h": 79
+					},
+					"margin": {
+						"x": 0,
+						"y": 1,
+						"w": 22,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-14.png",
+					"region": {
+						"x": 121,
+						"y": 1,
+						"w": 32,
+						"h": 79
+					},
+					"margin": {
+						"x": 23,
+						"y": 1,
+						"w": 48,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-21.png",
+					"region": {
+						"x": 155,
+						"y": 1,
+						"w": 30,
+						"h": 79
+					},
+					"margin": {
+						"x": 22,
+						"y": 1,
+						"w": 50,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-22.png",
+					"region": {
+						"x": 187,
+						"y": 1,
+						"w": 29,
+						"h": 79
+					},
+					"margin": {
+						"x": 28,
+						"y": 1,
+						"w": 51,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-27.png",
+					"region": {
+						"x": 218,
+						"y": 1,
+						"w": 28,
+						"h": 79
+					},
+					"margin": {
+						"x": 24,
+						"y": 1,
+						"w": 52,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-11.png",
+					"region": {
+						"x": 248,
+						"y": 1,
+						"w": 27,
+						"h": 79
+					},
+					"margin": {
+						"x": 25,
+						"y": 1,
+						"w": 53,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-2.png",
+					"region": {
+						"x": 277,
+						"y": 1,
+						"w": 27,
+						"h": 79
+					},
+					"margin": {
+						"x": 28,
+						"y": 1,
+						"w": 53,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-24.png",
+					"region": {
+						"x": 306,
+						"y": 1,
+						"w": 27,
+						"h": 79
+					},
+					"margin": {
+						"x": 27,
+						"y": 1,
+						"w": 53,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-26.png",
+					"region": {
+						"x": 335,
+						"y": 1,
+						"w": 27,
+						"h": 79
+					},
+					"margin": {
+						"x": 25,
+						"y": 1,
+						"w": 53,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-15.png",
+					"region": {
+						"x": 364,
+						"y": 1,
+						"w": 26,
+						"h": 79
+					},
+					"margin": {
+						"x": 29,
+						"y": 1,
+						"w": 54,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-20.png",
+					"region": {
+						"x": 392,
+						"y": 1,
+						"w": 25,
+						"h": 79
+					},
+					"margin": {
+						"x": 27,
+						"y": 1,
+						"w": 55,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-23.png",
+					"region": {
+						"x": 419,
+						"y": 1,
+						"w": 25,
+						"h": 79
+					},
+					"margin": {
+						"x": 29,
+						"y": 1,
+						"w": 55,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-5.png",
+					"region": {
+						"x": 446,
+						"y": 1,
+						"w": 25,
+						"h": 79
+					},
+					"margin": {
+						"x": 26,
+						"y": 1,
+						"w": 55,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-6.png",
+					"region": {
+						"x": 473,
+						"y": 1,
+						"w": 25,
+						"h": 79
+					},
+					"margin": {
+						"x": 28,
+						"y": 1,
+						"w": 55,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-7.png",
+					"region": {
+						"x": 500,
+						"y": 1,
+						"w": 25,
+						"h": 79
+					},
+					"margin": {
+						"x": 27,
+						"y": 1,
+						"w": 55,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-8.png",
+					"region": {
+						"x": 527,
+						"y": 1,
+						"w": 25,
+						"h": 79
+					},
+					"margin": {
+						"x": 29,
+						"y": 1,
+						"w": 55,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-1.png",
+					"region": {
+						"x": 554,
+						"y": 1,
+						"w": 24,
+						"h": 79
+					},
+					"margin": {
+						"x": 29,
+						"y": 1,
+						"w": 56,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-12.png",
+					"region": {
+						"x": 580,
+						"y": 1,
+						"w": 24,
+						"h": 79
+					},
+					"margin": {
+						"x": 27,
+						"y": 1,
+						"w": 56,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-4.png",
+					"region": {
+						"x": 606,
+						"y": 1,
+						"w": 21,
+						"h": 79
+					},
+					"margin": {
+						"x": 29,
+						"y": 1,
+						"w": 59,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-9.png",
+					"region": {
+						"x": 629,
+						"y": 1,
+						"w": 21,
+						"h": 79
+					},
+					"margin": {
+						"x": 30,
+						"y": 1,
+						"w": 59,
+						"h": 1
+					}
+				},
+				{
+					"filename": "walking animation-25.png",
+					"region": {
+						"x": 652,
+						"y": 1,
+						"w": 25,
+						"h": 78
+					},
+					"margin": {
+						"x": 25,
+						"y": 2,
+						"w": 55,
+						"h": 2
+					}
+				},
+				{
+					"filename": "walking animation-19.png",
+					"region": {
+						"x": 679,
+						"y": 1,
+						"w": 24,
+						"h": 78
+					},
+					"margin": {
+						"x": 27,
+						"y": 2,
+						"w": 56,
+						"h": 2
+					}
+				},
+				{
+					"filename": "walking animation-16.png",
+					"region": {
+						"x": 705,
+						"y": 1,
+						"w": 23,
+						"h": 78
+					},
+					"margin": {
+						"x": 28,
+						"y": 2,
+						"w": 57,
+						"h": 2
+					}
+				},
+				{
+					"filename": "walking animation-18.png",
+					"region": {
+						"x": 730,
+						"y": 1,
+						"w": 23,
+						"h": 78
+					},
+					"margin": {
+						"x": 28,
+						"y": 2,
+						"w": 57,
+						"h": 2
+					}
+				},
+				{
+					"filename": "walking animation-0.png",
+					"region": {
+						"x": 755,
+						"y": 1,
+						"w": 22,
+						"h": 78
+					},
+					"margin": {
+						"x": 25,
+						"y": 2,
+						"w": 58,
+						"h": 2
+					}
+				},
+				{
+					"filename": "walking animation-13.png",
+					"region": {
+						"x": 779,
+						"y": 1,
+						"w": 22,
+						"h": 78
+					},
+					"margin": {
+						"x": 33,
+						"y": 2,
+						"w": 58,
+						"h": 2
+					}
+				},
+				{
+					"filename": "walking animation-17.png",
+					"region": {
+						"x": 803,
+						"y": 1,
+						"w": 22,
+						"h": 78
+					},
+					"margin": {
+						"x": 29,
+						"y": 2,
+						"w": 58,
+						"h": 2
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:08f319799be2c32d907675ec05c9a129:803f431dbb5f810f33a8b06728702987:e85cb53176f3ed9cfadababdb4038453$"
+	}
+}
