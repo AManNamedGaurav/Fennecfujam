@@ -437,20 +437,20 @@ points = PoolVector2Array( 94, 94, 3.05176e-05, 94, 3.05176e-05, 7.62939e-06, 94
 } ]
 15/z_index = 0
 
-[sub_resource type="CircleShape2D" id=9]
+[sub_resource type="CircleShape2D" id=12]
 radius = 28.9254
 
-[sub_resource type="Curve2D" id=10]
+[sub_resource type="Curve2D" id=9]
 _data = {
 "points": PoolVector2Array( -103.314, 102.684, 103.314, -102.684, 256, -64, -114.653, -105.833, 114.653, 105.833, 640, -64, 69.9256, -44.7272, -69.9256, 44.7272, 640, 112, 93.8641, 141.741, -93.8641, -141.741, 256, 112, 0, 0, 0, 0, 256, -64 )
 }
 
-[sub_resource type="NavigationPolygon" id=11]
+[sub_resource type="NavigationPolygon" id=10]
 vertices = PoolVector2Array( 1272, -536, 1280, -304, 864, -304, 64, -544, 864, 896, 240, 896, 232, -304, 64, -304 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 2, 4, 5, 6 ), PoolIntArray( 3, 2, 6 ), PoolIntArray( 7, 3, 6 ) ]
 outlines = [ PoolVector2Array( 64, -544, 1272, -536, 1280, -304, 864, -304, 864, 896, 240, 896, 232, -304, 64, -304 ) ]
 
-[sub_resource type="Curve2D" id=12]
+[sub_resource type="Curve2D" id=11]
 _data = {
 "points": PoolVector2Array( -365.279, 73.6222, 365.279, -73.6222, 192, -504, -43.4182, -38.6988, 43.4182, 38.6988, 952, -504, 74.5661, -47.1937, -74.5661, 47.1937, 960, -328, 121.76, 39.6427, -121.76, -39.6427, 192, -328, 0, 0, 0, 0, 192, -504 )
 }
@@ -509,7 +509,7 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mask_0"]
-shape = SubResource( 9 )
+shape = SubResource( 12 )
 
 [node name="mask_1" type="Area2D" parent="."]
 position = Vector2( 640, 624 )
@@ -524,7 +524,7 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mask_1"]
-shape = SubResource( 9 )
+shape = SubResource( 12 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 508, 418 )
@@ -533,7 +533,7 @@ position = Vector2( 508, 418 )
 "enemy_paths",
 ]]
 position = Vector2( 88, 24 )
-curve = SubResource( 10 )
+curve = SubResource( 9 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemy0PatrolPath"]
 position = Vector2( 256, -64 )
@@ -542,15 +542,14 @@ rotate = false
 
 [node name="Enemy0" parent="Enemy0PatrolPath/PathFollow2D" instance=ExtResource( 1 )]
 chase_speed = 75
-vision_scale = 2
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
-navpoly = SubResource( 11 )
+navpoly = SubResource( 10 )
 
 [node name="Enemy1PatrolPath" type="Path2D" parent="."]
-curve = SubResource( 12 )
+curve = SubResource( 11 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Enemy1PatrolPath"]
 position = Vector2( 192, -504 )
@@ -563,4 +562,3 @@ mask_type = 1
 [connection signal="mask_collected" from="mask_0" to="." method="_on_mask_mask_collected"]
 [connection signal="body_entered" from="mask_1" to="mask_1" method="_on_mask_body_entered"]
 [connection signal="mask_collected" from="mask_1" to="." method="_on_mask_mask_collected"]
-[connection signal="game_over" from="player" to="." method="_on_player_game_over"]

@@ -4,6 +4,8 @@ extends KinematicBody2D
 export var patrol_speed: int = 65
 export var chase_speed: int = 65
 export var has_xray: bool
+export var mask_type: int = 0
+export var vision_scale:int = 1
 
 onready var player:Node2D = get_tree().get_current_scene().get_node("player")
 onready var patrol_path: PathFollow2D = get_parent()
@@ -11,6 +13,7 @@ onready var map_navigation:Navigation2D = get_tree().get_current_scene().get_nod
 
 enum States {PATROLLING, IN_RANGE, CHASING, RETURNING}
 
+signal game_over
 
 var patrol_resume_pos: Vector2
 var velocity = Vector2.ZERO
@@ -18,7 +21,8 @@ var state = States.PATROLLING
 var player_in_range: bool = false
 
 
-#func _ready():
+func _ready():
+	$Vision.set_scale($Vision.get_scale()*vision_scale)
 
 
 func _physics_process(delta):
@@ -56,6 +60,7 @@ func _physics_process(delta):
 					state = States.PATROLLING
 				else:
 					_move_towards_with_speed(patrol_resume_pos, patrol_speed, delta)
+	
 
 func _move_towards_with_speed(dest: Vector2, speed: int, delta: float) -> void:
 	var path_to_destination = map_navigation.get_simple_path(get_global_position(), dest)
@@ -80,7 +85,9 @@ func _move_towards_with_speed(dest: Vector2, speed: int, delta: float) -> void:
 
 func _can_see_player() -> bool:
 	if player_in_range:
-		if has_xray:
+		if player.get_mask_type() == mask_type:
+			return false
+		elif has_xray:
 			return true
 		else:
 			var space_state = get_world_2d().direct_space_state
@@ -124,3 +131,4 @@ func _on_Area2D_body_exited(body):
 #					state = "Patrol"
 				
 	
+

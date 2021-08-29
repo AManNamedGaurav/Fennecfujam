@@ -6,13 +6,21 @@ export var acceleration = 1
 
 enum FacingDirection {LEFT, RIGHT, DOWN, UP}
 
+signal game_over
+
 var velocity = Vector2()
-var masks = 0
+var mask_type = 99 setget set_mask_type, get_mask_type
 var facing_dir = FacingDirection.RIGHT
 #func _ready():
 #
 #	pass
 
+func set_mask_type(mask: int):
+	#change animation sets somehow
+	mask_type = mask
+
+func get_mask_type() -> int:
+	return mask_type
 
 func get_input():
 	var input = Vector2()
@@ -72,7 +80,11 @@ func _physics_process(delta):
 	 
 	velocity = move_and_slide(velocity)
 	
-	masks = min(masks,9)
+	for index in get_slide_count():
+		var collision = get_slide_collision(index)
+		if collision.collider.is_in_group("enemies"):
+			emit_signal("game_over")
+	
 
 
 func _on_AnimatedSprite_animation_finished():

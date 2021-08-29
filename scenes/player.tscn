@@ -29,7 +29,7 @@
 [ext_resource path="res://sprite/player_walking.sprites/walking animation-27.tres" type="Texture" id=27]
 [ext_resource path="res://sprite/player_walking.sprites/walking animation-22.tres" type="Texture" id=28]
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CapsuleShape2D" id=1]
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -43,45 +43,45 @@ animations = [ {
 "name": "right_to_left",
 "speed": 2.0
 }, {
-"frames": [ ExtResource( 24 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 25 ) ],
-"loop": true,
-"name": "walk_right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "walk_up",
-"speed": 6.0
-}, {
 "frames": [ ExtResource( 28 ), ExtResource( 15 ), ExtResource( 22 ), ExtResource( 21 ), ExtResource( 26 ), ExtResource( 27 ) ],
 "loop": true,
 "name": "walk_down",
 "speed": 6.0
-}, {
-"frames": [ ExtResource( 23 ) ],
-"loop": true,
-"name": "idle_down",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "idle_left",
-"speed": 1.0
 }, {
 "frames": [ ExtResource( 20 ) ],
 "loop": true,
 "name": "idle_right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ) ],
+"frames": [ ExtResource( 24 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 25 ) ],
 "loop": true,
-"name": "idle_up",
+"name": "walk_right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 1 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "walk_left",
 "speed": 4.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "idle_left",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "idle_down",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "idle_up",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "walk_up",
+"speed": 6.0
 } ]
 
 [node name="player" type="KinematicBody2D"]
@@ -93,10 +93,10 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -5.45697e-12, 0 )
+position = Vector2( 0, -4.13508 )
 rotation = 1.5708
-scale = Vector2( 0.4, 0.88 )
-shape = SubResource( 3 )
+scale = Vector2( 1.08, 0.88 )
+shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
